@@ -71,7 +71,7 @@ There's a number of options you can pass `$.fancy_suggest()`.
 * **no\_results\_label:** Text shown when there are no results if `no_results` is enabled. Default is "No Results".
 * **url\_method:** URL method used for Ajax call. Set to "get" or "post". Default is "get".
 * **min\_length:** The minimum length of the search term before the ajax request will be made. Helps to reduce short queueries and useful when using Fulltext searches which usually have a character limit. Default is "4".
-* 
+
 ## Customization
 
 One of the things I felt most important developing this was it would be really easy to customize the suggestion results, to add an extra field, or a thumbnail icon or whatever you wanted. Cause of this, all html used to generate the suggest box, is stored as an option, and data is inserted mustache style.
