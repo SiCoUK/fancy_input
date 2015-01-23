@@ -74,6 +74,7 @@
       pos_left: 0,
       hide_delay: 0,
       data: null,
+      min_length: 4,
       tpl_container_id: "fancy_suggest",
       tpl_container_class: "fancy_suggest",
       tpl_container: '<div id="{{id}}"><ol></ol></div>',
@@ -172,7 +173,7 @@
     query_for_data: function(elm, options){
       var term = this.get_value(elm, options);
       var uid = options.url + "?" + term + ":" + options.limit;
-      if (term !== "") {
+      if (term !== "" && term.length >= options.min_length) {
         if (this.query_cache.hasOwnProperty(uid)) {
           this.current_results = this.query_cache[uid];
           this.prerender(elm, this.current_results, options);
